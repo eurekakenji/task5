@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        // 5
+
         int[][] jagarr = new int[5][];
         jagarr[0] = new int[3];
         jagarr[1] = new int[5];
@@ -19,15 +19,15 @@ public class Main {
             }
         }
         System.out.println("unsorted: ");
-        for (int j = 0; j < jagarr.length; j++) {
-            for (int y = 0; y < jagarr[j].length; y++)
-                System.out.print(jagarr[j][y] + " ");
+        for (int[] nums : jagarr) {
+            for (int y = 0; y < nums.length; y++)
+                System.out.print(nums[y] + " ");
             System.out.println();
         }
         System.out.println("sorted: ");
-        System.out.println();
-        for (int i = 0; i < jagarr.length; i++) {
-            Arrays.sort(jagarr[i]);
+        for (int[] nums : jagarr) {
+            Arrays.sort(nums);
+            System.out.print(nums[0] + " ");
 
         }
     }
